@@ -112,6 +112,35 @@ p>
 </p>
   Exit the SSH connection by typing ‘exit’ and pressing [return]:
 </p>
-  <img src="" height="75%" width="100%" alt="SSH traffic"/>
+  <img src="https://i.imgur.com/AizreWf.png" height="75%" width="100%" alt="SSH traffic"/>
 <p>
+<br />
+<br />
+<h3 align="center">
+  Next, we're going to observe DHCP Traffic
+</h3>
+<br />
+<p>
+  Back in Wireshark, filter for DHCP traffic only. From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew)
+</p>
+Observe the DHCP traffic appearing in WireShark:
+</p>
+<p>
+  <img src="https://i.imgur.com/2rJdLIV.png" height="75%" width="100%" alt="DHCP traffic"/>
+</p>
+<br />
+<br />
+<h3 align="center">
+  Let's now observe our DNS traffic next
+</h3>
+<br />
+<p>
+  Back in Wireshark, filter for DNS traffic only.
+</p>
+<p>
+  From your Windows 10 VM within a command line, use nslookup to see what google.com and disney.com’s IP addresses are and observe the DNS traffic being shown in WireShark:
+</p>
+<p>
+  <img src="" height="75%" width="100%" alt="DNS traffic"/>
+</p>
 <br />
