@@ -138,9 +138,33 @@ Observe the DHCP traffic appearing in WireShark:
   Back in Wireshark, filter for DNS traffic only.
 </p>
 <p>
-  From your Windows 10 VM within a command line, use nslookup to see what google.com and disney.com’s IP addresses are and observe the DNS traffic being shown in WireShark:
+  From your Windows 10 VM within a command line, use nslookup to see what microsoft.com and apple.com’s IP addresses are and observe the DNS traffic being shown in WireShark:
 </p>
 <p>
-  <img src="" height="75%" width="100%" alt="DNS traffic"/>
+  <img src="https://i.imgur.com/CRHw1ew.png" height="75%" width="100%" alt="DNS traffic"/>
+</p>
+<br />
+<h3 align="center">
+  Finally, we will observe RDP traffic to finish up this tutorial
+</h3>
+<br />
+<p>
+  Back in Wireshark, filter for RDP traffic only using "tcp.port==3389".
+</p>
+<p>
+  You'll be obseving a non-stop stream of traffic. Do you know why there is constant traffic in our tcp.port==3389?
+</p>
+<p>
+  The answer is because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted:
+</p>
+<p>
+  <img src="https://i.imgur.com/EEFYeBZ.png" height="75%" width="100%" alt="RDP traffic"/>
+</p>
+<p>
+  Now that we're finished observing the network, DON'T FORGET TO CLEAN UP YOUR AZURE ENVIRONMENT! This will prevent you from incurring additional charges and you won't be left surprised!
+</p>
+<p>
+  Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this tutorial, and verify Resource Group deletion. You'll typically be notified or can click unde the bell notification just to make sure.
+</p>
 </p>
 <br />
